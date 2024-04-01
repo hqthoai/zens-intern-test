@@ -2,6 +2,8 @@ const { v4: uuidv4 } = require('uuid');
 const calAgeCookie = require("../utils/calAgeCookie");
 
 const checkCookie = (req, res, next) => {
+    const user = req.cookies.user;
+
     if (!user) {
         console.log('chưa có cookie nè');
         const newUser = uuidv4();
