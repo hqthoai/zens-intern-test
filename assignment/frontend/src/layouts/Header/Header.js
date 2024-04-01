@@ -1,5 +1,5 @@
 import headerLogo from '../../assets/images/headerLogo.png';
-import avatar from '../../assets/images/avatar.jpg';
+import avatar from '../../assets/images/sunflower.jpg';
 const HeaderUser = () => {
     return (
         <div className='flex items-center justify-end h-full'>
@@ -16,7 +16,7 @@ const HeaderUser = () => {
 
 function Header() {
     return (
-        <div className="flex md:pl-[190px] md:pr-[116px] pl-[19px] pr-4 items-center justify-between h-[103px]">
+        <div className="flex lg:pl-[190px] lg:pr-[116px] md:px-[80px] pl-[19px] pr-4 items-center justify-between h-[103px]">
             <div className='h-[70px] w-[70px]'>
                 <img className='h-full w-full' src={headerLogo} alt="headerLogo" />
             </div>
