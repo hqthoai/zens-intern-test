@@ -1,7 +1,6 @@
 const Joke = require('../models/Joke');
 const Vote = require('../models/Vote');
 
-
 const JokeController = {
     getAll: (req, res) => {
         Joke.find({})

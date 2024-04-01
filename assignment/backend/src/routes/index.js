@@ -1,7 +1,7 @@
 const jokeRouter = require('./jokeRouter');
 const voteRouter = require('./voteRouter');
 
-const route = (app) => {
+function route(app) {
     app.use('/api/jokes', jokeRouter);
     app.use('/api/votes', voteRouter);
     app.get('/', (req, res) => {
