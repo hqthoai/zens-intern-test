@@ -1,13 +1,16 @@
 require('dotenv').config();
+const moment = require('moment-timezone');
 require('./configs/db/connection');
 const express = require('express');
 const cookieParser = require('cookie-parser');
 const cors = require('cors');
 const route = require('./routes/index');
 
-const PORT = 3001;
-const app = express();
+moment.tz.setDefault('Asia/Ho_Chi_Minh');
 
+const PORT = 3001;
+
+const app = express();
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
