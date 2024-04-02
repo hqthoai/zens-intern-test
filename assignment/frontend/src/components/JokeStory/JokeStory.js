@@ -5,24 +5,24 @@ import VoteService from "../../services/VoteService";
 
 function JokeStory() {
     const [joke, setJoke] = useState(null);
+    const [vote, setVote] = useState(false);
 
-    const fetchJoke = async () => {
-        try {
-            const data = await JokeService.getAvailable();
-            if (data)
-                setJoke(data);
-        } catch (error) {
-            console.error(error);
-        }
-    };
     useEffect(() => {
+        const fetchJoke = async () => {
+            try {
+                const data = await JokeService.getAvailable();
+                setJoke(data);
+            } catch (error) {
+                console.error(error);
+            }
+        };
         fetchJoke();
-    }, []);
+    }, [vote]);
+
     const handleVote = async (type) => {
-        console.log('vote ne', type);
         try {
             await VoteService.voteJoke(joke?._id, type);
-            fetchJoke();
+            setVote(!vote);
         } catch (error) {
             console.error(error);
         }

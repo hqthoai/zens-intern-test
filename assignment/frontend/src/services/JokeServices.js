@@ -4,6 +4,11 @@ const JokeService = {
     getAvailable: async () => {
         try {
             const response = await fetch(apiUrl + '/available', {
+                method: 'GET',
+                mode: 'cors',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
                 credentials: 'include'
             });
             if (!response.ok) {
