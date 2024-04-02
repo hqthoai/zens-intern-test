@@ -8,7 +8,7 @@ const checkCookie = (req, res, next) => {
         console.log('chưa có cookie nè');
         const newUser = uuidv4();
         const maxAge = calAgeCookie();
-        res.cookie('user', newUser, { maxAge: maxAge, sameSite: 'none', });
+        res.cookie('user', newUser, { maxAge: maxAge, sameSite: 'none', secure: true });
         return res.redirect(req.originalUrl);
     }
     next();
