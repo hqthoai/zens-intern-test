@@ -19,7 +19,7 @@ app.use(express.json());
 
 app.use(cors(
     {
-        origin: '*',
+        origin: ['http://localhost:3000', 'https://zens-intern-test-ui.vercel.app', 'https://zens-intern-test-three.vercel.app'],
         methods: 'GET,POST,PUT,PATCH,DELETE',
         allowedHeaders: 'Content-Type,Authorization',
         preflightContinue: true,
