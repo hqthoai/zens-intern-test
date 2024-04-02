@@ -2,10 +2,10 @@ import headerLogo from '../../assets/images/headerLogo.png';
 import avatar from '../../assets/images/sunflower.jpg';
 const HeaderUser = () => {
     return (
-        <div className='flex items-center justify-end h- md:text-base text-xs'>
+        <div className='flex items-center justify-end h- md:text-base text-xs md:font-lato font-sans'>
             <div className='text-end mr-4'>
                 <p className='text-gray-500 leading-tight md:italic'>Handicrafted by</p>
-                <p className='text-gray-600 font-medium leading-tight'>Jim HLS</p>
+                <p className='text-gray-600 font-semibold leading-tight'>Jim HLS</p>
             </div>
             <div className='md:h-[68px] md:w-[68px] h-[38px] w-[38px]'>
                 <img className='h-full w-full rounded-full' src={avatar} alt="avatar" />

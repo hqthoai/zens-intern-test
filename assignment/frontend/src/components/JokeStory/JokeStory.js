@@ -35,7 +35,7 @@ function JokeStory() {
     return (
         <React.Fragment>
             <ToastContainer />
-            <div className="lg:px-[220px] md:px-[80px] px-7 mt-[68px] mb-[104px] min-h-[200px]">
+            <div className="lg:px-[220px] md:px-[80px] px-7 mt-[68px] mb-[104px] min-h-[200px] md:font-lato font-sans">
                 {joke?.message ?
                     <div className="md:min-h-[200px] min-h-[300px] text-gray-700 font-semibold md:text-xl text-base text-center">
                         <p>{joke.message}</p>
